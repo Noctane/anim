@@ -11,13 +11,14 @@ var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 
 // static server & watching sass/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['sass', 'scripts'], function() {
 
   browserSync.init({
     server: './dist'
   });
 
   gulp.watch(['assets/sass/0-tools/*.scss','assets/sass/1-base/*.sass','assets/sass/2-modules/*.sass','assets/sass/*.scss'], ['sass']);
+  gulp.watch('./assets/js/*.js', ['scripts']);
   gulp.watch('dist/*.html').on('change', browserSync.reload);
 });
 
@@ -34,6 +35,18 @@ gulp.task('sass', function() {
     }))
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
+});
+
+// scripts task
+gulp.task('scripts', function() {
+  return gulp.src('./assets/js/*.js')
+  .pipe(concat('app.js'))
+  .pipe(gulp.dest('./dist/js/'))
+  .pipe(uglify())
+  .pipe(rename({
+    suffix: '.min'
+  }))
+  .pipe(gulp.dest('./dist/js/'))
 });
 
 gulp.task('default', ['serve']);
