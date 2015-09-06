@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   // circle-nav functions
   $('.circle-nav__item a').hover(function(){
+    $('.circle-nav__item').find('.is_open').removeClass('is_open');
     $(this).siblings('.tooltip').toggleClass('is_open');
   });
 
@@ -10,6 +11,9 @@ $(document).ready(function() {
     setTimeout(function() {
       $('.circle-nav__item').eq(i).show().addClass('bounceIn');
     }, 200 * i);
+    setTimeout(function() {
+      $('.tooltip').first().addClass('is_open')
+    }, 1200);
   });
 
   // timeline-nav functions
@@ -19,7 +23,7 @@ $(document).ready(function() {
       $('.timeline-nav__item').eq(i).show().addClass('bounceIn');
     }, 200 * i);
     setTimeout(function() {
-      $('.bubble').first().addClass('is_open')
+      $('.bubble').first().toggleClass('is_open')
     }, 1200);
   });
 

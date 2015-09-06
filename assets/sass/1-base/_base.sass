@@ -1,14 +1,22 @@
 .container
   width: 800px
   height: 300px
-  margin: 140px auto 60px
+  border-top: solid 1px #ccc
+  margin: 140px auto
+  &:first-of-type
+    border-top: none
+
+h1
+  font-weight: normal
+  color: #ccc
+  margin-bottom: 100px
 
 ul
   list-style: none
   padding: 0
   margin: 0
 
-a
+a.btn
   display: block
   text-decoration: none
   font-size: 30px
@@ -17,3 +25,7 @@ a
   border-radius: 50%
   text-align: center
   line-height: 80px
+
+hr
+  width: 2em
+  border: solid 2px #2C2C2C

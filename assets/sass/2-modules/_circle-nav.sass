@@ -4,7 +4,7 @@ ul.circle-nav
 li.circle-nav__item
   display: block
   position: absolute
-  a
+  a.btn
     color: #fff
     &:hover
       animation-name: tada
@@ -14,32 +14,32 @@ li.circle-nav__item
   &:nth-child(1)
     top: 0
     left: 47%
-    a
-      background-color: #037eda
+    a.btn
+      background-color: $blue
 
   &:nth-child(2)
     top: 80px
     right: 30%
-    a
-      background-color: #fc9308
+    a.btn
+      background-color: $orange
 
   &:nth-child(3)
     top: 180px
     right: 35%
-    a
-      background-color: #8cb032
+    a.btn
+      background-color: $green
 
   &:nth-child(4)
     top: 180px
     left: 40%
-    a
-      background-color: #f05673
+    a.btn
+      background-color: $red
 
   &:nth-child(5)
     top: 80px
     left: 35%
-    a
-      background-color: #6f477d
+    a.btn
+      background-color: $purple
 
   .tooltip
     color: #fff
@@ -61,33 +61,33 @@ li.circle-nav__item
     background: transparentize($blue, 0.6)
     color: $blue
     top: -90px
-    left: 45px
+    left: 50px
 
   #tooltip-2
     background: transparentize($orange, 0.6)
     color: $orange
     top: -90px
-    left: 45px
+    left: 50px
 
   #tooltip-3
     background: transparentize($green, 0.6)
     color: $green
-    bottom: -90px
-    left: 42px
+    bottom: -75px
+    left: 50px
     border-radius: 4px 20px 20px 20px
 
   #tooltip-4
     background: transparentize($red, 0.6)
     color: $red
     bottom: -90px
-    right: 42px
+    right: 50px
     border-radius: 20px 4px 20px 20px
 
   #tooltip-5
     background: transparentize($purple, 0.6)
     color: $purple
     top: -90px
-    right: 42px
+    right: 50px
     border-radius: 20px 20px 4px 20px
 
 .bounceIn
