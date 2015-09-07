@@ -6,6 +6,7 @@ var serve = require('gulp-serve');
 var concat = require('gulp-concat');
 var cssmin = require('gulp-minify-css');
 var rename = require("gulp-rename");
+var prefix = require("gulp-autoprefixer");
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
@@ -27,6 +28,10 @@ gulp.task('sass', function() {
   return gulp.src('assets/sass/*.scss')
     .pipe(sass({
       onError: browserSync.notify
+    }))
+    .pipe(prefix({
+      browser: ['last 15 versions', '> 1%', 'ie 8', 'ie7'],
+      cascade: true
     }))
     .pipe(gulp.dest('dist/css'))
     .pipe(cssmin())

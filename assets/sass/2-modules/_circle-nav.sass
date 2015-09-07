@@ -13,33 +13,63 @@ li.circle-nav__item
 
   &:nth-child(1)
     top: 0
-    left: 47%
+    left: 160px
+    @media (max-width: 359px)
+      top: 0
+      left: 130px
     a.btn
-      background-color: $blue
+      background-color: transparentize($blue, 0.6)
+      border: solid 1px $blue
+      &:hover
+        background-color: $blue
 
   &:nth-child(2)
     top: 80px
-    right: 30%
+    right: 50px
+    @media (max-width: 359px)
+      top: 60px
+      right: 65px
     a.btn
-      background-color: $orange
+      background-color: transparentize($orange, 0.6)
+      border: solid 1px $orange
+      &:hover
+        background-color: $orange
 
   &:nth-child(3)
     top: 180px
-    right: 35%
+    right: 100px
+    @media (max-width: 359px)
+      top: 140px
+      right: 90px
     a.btn
-      background-color: $green
+      background-color: transparentize($green, 0.6)
+      border: solid 1px $green
+      &:hover
+        background-color: $green
 
   &:nth-child(4)
     top: 180px
-    left: 40%
+    left: 100px
+    @media (max-width: 359px)
+      top: 140px
+      left: 90px
     a.btn
-      background-color: $red
+      background-color: transparentize($red, 0.6)
+      border: solid 1px $red
+      &:hover
+        background-color: $red
 
   &:nth-child(5)
     top: 80px
-    left: 35%
+    left: 50px
+    @media (max-width: 359px)
+      top: 60px
+      left: 65px
     a.btn
-      background-color: $purple
+      background-color: transparentize($purple, 0.6)
+      border: solid 1px $purple
+      &:hover
+        background-color: $purple
 
   .tooltip
     color: #fff
@@ -49,8 +79,6 @@ li.circle-nav__item
     position: absolute
     padding: 0px 15px
     border-radius: 20px 20px 20px 4px
-    border: solid 3px #fff
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
     &.is_open
       display: block
       animation-name: tada
@@ -60,33 +88,33 @@ li.circle-nav__item
   #tooltip-1
     background: transparentize($blue, 0.6)
     color: $blue
-    top: -90px
+    top: -80px
     left: 50px
 
   #tooltip-2
     background: transparentize($orange, 0.6)
     color: $orange
-    top: -90px
+    top: -80px
     left: 50px
 
   #tooltip-3
     background: transparentize($green, 0.6)
     color: $green
-    bottom: -75px
+    bottom: -60px
     left: 50px
     border-radius: 4px 20px 20px 20px
 
   #tooltip-4
     background: transparentize($red, 0.6)
     color: $red
-    bottom: -90px
+    bottom: -80px
     right: 50px
     border-radius: 20px 4px 20px 20px
 
   #tooltip-5
     background: transparentize($purple, 0.6)
     color: $purple
-    top: -90px
+    top: -80px
     right: 50px
     border-radius: 20px 20px 4px 20px
 

@@ -1,15 +1,28 @@
 .container
-  width: 800px
-  height: 300px
+  width: 60%
+  height: 500px
   border-top: solid 1px #ccc
   margin: 140px auto
   &:first-of-type
     border-top: none
+  @media (max-width: 430px)
+    width: 100%
+    height: 400px
+    margin: 0 auto
+
 
 h1
   font-weight: normal
   color: #ccc
   margin-bottom: 100px
+
+.nav-container
+  width: 400px
+  height: 400px
+  position: relative
+  margin: 0 auto
+  @media (max-width: 360px)
+    width: 100%
 
 ul
   list-style: none
@@ -19,12 +32,17 @@ ul
 a.btn
   display: block
   text-decoration: none
-  font-size: 30px
+  font-size: 2em
   width: 80px
   height: 80px
   border-radius: 50%
   text-align: center
   line-height: 80px
+  @media (max-width: 360px)
+    width: 60px
+    height: 60px
+    font-size: 1.5em
+    line-height: 60px
 
 hr
   width: 2em
