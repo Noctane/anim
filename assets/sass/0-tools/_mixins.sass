@@ -1,0 +1,12 @@
+=btn-color($color)
+  background: transparentize($color, 0.6)
+  border: solid 1px $color
+  &:hover
+    background: $color
+
+=pop-color($left, $top, $color)
+  left: $left
+  top: $top
+  background: transparentize($color, 0.6)
+  color: $color
+  border: solid 1px $color

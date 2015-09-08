@@ -1,0 +1,36 @@
+.grid
+  width: 500px
+  margin: 0 auto
+  @media ( max-width: 480px)
+    width: 100%
+    padding: 10px
+
+.grid__row
+  display: flex
+  margin: 0
+  &:last-of-type
+    width: 60%
+    margin: 0 auto
+  @media ( max-width: 768px)
+    display: block
+    &:last-of-type
+      width: 100%
+
+
+
+div[class^='grid__item'], div[class*=' grid__item']
+  flex: 1
+  text-align: center
+  padding: 15px
+  @media ( max-width: 480px)
+    padding: 10px
+  @media ( max-width: 768px)
+    text-align: left
+
+
+
+.grid__item-2
+  order: 1
+
+.grid__item-3
+  order: 1

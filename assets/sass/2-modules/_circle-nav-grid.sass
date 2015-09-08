@@ -1,0 +1,92 @@
+.nav_item
+  position: relative
+  a.btn
+    width: 80px
+    height: 80px
+    line-height: 80px
+    border-radius: 50%
+    margin: 0 auto
+    background-color: pink
+    color: white
+    &:hover
+      animation-name: tada
+      animation-duration: 1s
+      animation-fill-mode: both
+    @media ( max-width: 768px)
+      width: 60px
+      height: 60px
+      line-height: 60px
+      margin: 0
+
+.grid__item-1
+  a.btn
+    +btn-color($blue)
+
+.grid__item-2
+  a.btn
+    +btn-color($orange)
+
+.grid__item-3
+  a.btn
+    +btn-color($green)
+
+.grid__item-4
+  a.btn
+    +btn-color($red)
+
+.grid__item-5
+  a.btn
+    +btn-color($purple)
+
+.pop
+  width: 250px
+  position: absolute
+  display: none
+  box-sizing: border-box
+  padding: 0px 15px
+  border-radius: 4px
+  &.is_open
+    display: block
+    animation-name: fadeInDown
+    animation-duration: 500ms
+    animation-fill-mode: both
+
+#pop-1
+  +pop-color(110px, -75px, $blue)
+  @media ( max-width: 768px)
+    +pop-color(85px, 0, $blue)
+    display: block
+
+#pop-2
+  +pop-color(160px, 5px, $orange)
+  @media ( max-width: 768px)
+    +pop-color(85px, 0, $orange)
+    display: block
+
+#pop-3
+  +pop-color(110px, 15px, $green)
+  @media ( max-width: 768px)
+    +pop-color(85px, 0, $green)
+    display: block
+
+#pop-4
+  +pop-color(-240px, 10px, $red)
+  @media ( max-width: 768px)
+    +pop-color(85px, 0, $red)
+    display: block
+
+#pop-5
+  +pop-color(-190px, 10px, $purple)
+  @media ( max-width: 768px)
+    +pop-color(85px, 0, $purple)
+    display: block
+
+
+@keyframes fadeInDown
+  from
+    opacity: 0
+    transform: translate3d(0, -100%, 0)
+
+  to
+    opacity: 1
+    transform: none
